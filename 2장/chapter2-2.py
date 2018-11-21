@@ -128,4 +128,5 @@ second_input = input()
 print(first_input,'+',second_input,'=',int(first_input)+int(second_input))
 print(first_input,'-',second_input,'=',int(first_input)-int(second_input))
 print(first_input,'*',second_input,'=',int(first_input)*int(second_input))
+
 print(first_input,'/',second_input,'=',int(first_input)/int(second_input))
