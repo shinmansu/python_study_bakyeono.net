@@ -81,8 +81,18 @@ None은 값이 없음을 나타내는 값이다. 함수의 반환값을 지정�
 #
 # result = no_return()
 
-def triangle_area(base,height):
-    '''삼각형 밑변의 길이를 앞에, 높이를 뒤에 적어줍니다 '''
-    print("삼각형의 넓이는",(base*height)/2,"입니다")
+# def triangle_area(base,height):
+#     '''삼각형 밑변의 길이를 앞에, 높이를 뒤에 적어줍니다 '''
+#     print("삼각형의 넓이는",(base*height)/2,"입니다")
+#
+# triangle_area(10,8)
 
-triangle_area(10,8)
+'''
+>>> help(minus_8)
+Help on function minus_8 in module __main__:
+
+minus_8(x)
+    정수 x를 입력받아 8을 뺀 값을 반환한다.
+HELP에 함수를 넣으면 해당 함수의 설명을 볼 수 있다     
+'''
+
