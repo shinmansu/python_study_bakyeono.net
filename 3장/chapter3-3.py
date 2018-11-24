@@ -31,11 +31,11 @@ def 함수이름():       # ❶ 헤더 행
 #
 # inputabs()
 #
-# def print_price(num_drink):                       # ❶ 매개변수(num_drink) 정의
+# def print_price(num_drㅓㅡㅏㅜ ㅡink):                       # ❶ 매개변수(num_drink) 정의
 #     """음료의 잔 수(num_drink)를 전달받아,
 #     가격을 화면에 출력한다."""
-#     price_per_drink = 2500                        # 한 잔 당 가격
-#     total_price = num_drink * price_per_drink     # ❷ num_drink에 전달된 값 사용
+#     price_per_drink = 2500                        # 한 잔 당 가격 지역변수
+#     total_price = num_drink * price_per_drink     # ❷ num_drink에 전달된 값 사용 지역변수
 #     print('음료', num_drink, '잔:', total_price)  # ❸
 #
 # print_price(3)
