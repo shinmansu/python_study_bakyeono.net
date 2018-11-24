@@ -37,24 +37,24 @@
 
 pi = 3.141592653589793
 
-def area_of_circle(radius):
-    """원의 반지름(radius)을 입력받아 넓이를 반환한다."""
-    area = radius * radius * pi
-    return area
-
-def volume_of_cylinder(radius, height):
-    """원기둥의 반지름(radius)과 높이(height)를 입력받아
-    부피를 반환한다."""
-    top_area = area_of_circle(radius)
-    volume = top_area * height
-    return volume
-
-result = volume_of_cylinder(5, 10)
-print(result)
-
-# 전역 변수 pie / result
-#지역변수 area / top_area / volume
-
+# def area_of_circle(radius):
+#     """원의 반지름(radius)을 입력받아 넓이를 반환한다."""
+#     area = radius * radius * pi
+#     return area
+#
+# def volume_of_cylinder(radius, height):
+#     """원기둥의 반지름(radius)과 높이(height)를 입력받아
+#     부피를 반환한다."""
+#     top_area = area_of_circle(radius)
+#     volume = top_area * height
+#     return volume
+#
+# result = volume_of_cylinder(5, 10)
+# print(result)
+#
+# # 전역 변수 pie / result
+# #지역변수 area / top_area / volume
+#
 '''
 개념 정리
 
@@ -62,3 +62,25 @@ print(result)
 전역변수를 함수 안에서 수정하는 것은 좋지 않다.
 '''
 
+# num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
+#
+# def stamp():
+#     """쿠폰 스탬프가 찍힌 횟수를 증가시키고, 화면에 출력한다."""
+#     global num_stamp           # ❶ num_stamp는 전역변수다
+#     num_stamp = num_stamp + 1  # 이제 오류가 발생하지 않는다
+#     print(num_stamp)
+#
+# stamp()  # 화면에 1이 출력된다
+# stamp()  # 화면에 2가 출력된다
+
+'''
+global  문을 쓰지 않으면 에러가 난다 
+전역변수를 지역변수에서 활용하는 것은 좋지 않다. 
+나중에 전역변수가 어떻게 변경되었는지를 함수 안에서 다시 확인을 해야 하는데 
+이는 작은 문제를 나누어 큰 문제를 푸는 방법에 적합하지 않다 
+작은 문제가 작은 문제에서 끝나고 이걸 다시 합했을 때 큰 문제가 되게 하려면 
+작은 문제들끼리는 MECE 법칙을 지켜야 한다 
+
+상호 배타적이되, 합쳤을때는 전체가 될 수 있도록 해야 한다 
+작은 문제에 어떤 변수가 중복으로 사용된다면 문제를 정확히 보기 위해서는 함수의 정의를 다시 보아야 하기 때문이다 
+'''
