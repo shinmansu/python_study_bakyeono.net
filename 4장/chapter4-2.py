@@ -125,13 +125,9 @@ print('저는',0x7d0,'년에 태어났습니다.','올해 나이는',0x12,'살�
 print('저는 올해',0o22,'세 입니다.')
 print(-25287e-2)
 
-def almost_equal(float_diff_point = 0.0001):
+def almost_equal(number1,number2,threshold = 0.0001):
     """실수 2개를 입력 받아 그 차이가 0.0001 보다 작으면 True, 보다 크면 False를 출력한다."""
-    print('계산할 실수1을 입력해주세요.')
-    float1 = float(input())
-    print('계산할 실수2를 입력해주세요.')
-    float2 = float(input())
-    return abs(float2-float1) < float_diff_point
+    return abs(number2-number1) < threshold
 
 
-print(almost_equal(1))
+print(almost_equal(1.0,1.1))
