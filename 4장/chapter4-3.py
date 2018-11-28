@@ -136,3 +136,56 @@ print(text.lstrip()) # 왼 쪽 공백 제거
 
 print(book.split(','))  #문자열을 , 기준으로 2개로 나눈다
 print(poem.splitlines()) #문자열을 행에 따라서 나눈다
+
+
+print(poem.splitlines()[0]) # 문자열을 나누고 그중에서 1개를 뽑아올 수 있다
+
+print(('한글').isalpha())      # 문자열이 모두 문자인지 검사: 참
+
+print(('1024').isalpha())      # 문자열이 모두 문자인지 검사: 거짓
+
+print(('1024').isnumeric())    # 문자열이 모두 숫자인지 검사: 참
+
+print(('3.1415').isnumeric())  # 문자열이 모두 숫자인지 검사: 거짓
+
+print(('1학년').isalnum())     # 문자열이 모두 문자 또는 숫자인지 검사: 참
+
+
+'''
+연습문제 4-4 틀린 단어 고치기
+
+'I think, therefore I am.' 이라는 문자열을 'I eat, therefore I am.'으로 치환하여 화면에 출력하는 프로그램을 작성하라.
+'''
+
+think = 'I think, therefore I am'
+
+think_to_eat = think.replace('think','eat')
+
+print(think_to_eat)
+
+
+'''
+손님들의 음료 주문 내용을 메모하여 다음과 같이 문자열로 기록해 두었다.
+
+order_memo = """주문1: 아메리카노
+주문2: 카페 라테
+주문3: 아메리카노, 아메리카노
+주문4: 아메리카노, 카페 라테
+주문5: 카페 라테, 카페 라테
+"""
+이 메모에서 주문을 몇 번 받았는지, 아메리카노가 몇 잔 주문되었는지 각각 세어 화면에 출력하는 프로그램을 작성하라.
+'''
+
+def count_order_memo(order_memo = """주문1: 아메리카노
+주문2: 카페 라테
+주문3: 아메리카노, 아메리카노
+주문4: 아메리카노, 카페 라테
+주문5: 카페 라테, 카페 라테
+""",menu = '아메리카노'):
+    """메모를 입력받아 주문의 수와 메뉴의 수를 확인하는 함수, 메모와 메뉴를 변경하여 입력할 수 있다."""
+    order = '주문'
+    order_count = order_memo.count(order)
+    menu_count = order_memo.count(menu)
+    return order_count,menu_count
+
+print(count_order_memo())
