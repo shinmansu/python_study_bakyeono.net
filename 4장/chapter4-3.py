@@ -189,3 +189,16 @@ def count_order_memo(order_memo = """주문1: 아메리카노
     return order_count,menu_count
 
 print(count_order_memo())
+
+def weekly_count_uncle_bob_uesr(uncle_bob_weekly_user='11월 29일 영석님,혜승님,경욱님',user1 = '만수',user2='혜승님',user3='경욱님',user4='건령님',user5='현재님',user6='영석님'):
+    """엉클 밥 일주일 멤버가 적혀있는 메모와 실제 이용자 이름을 전달받아 개인별 금액을 산출하는 함수"""
+    bob_price = 1000
+    user1_count_price = uncle_bob_weekly_user.count(user1) * bob_price
+    user2_count_price = uncle_bob_weekly_user.count(user2) * bob_price
+    user3_count_price = uncle_bob_weekly_user.count(user3) * bob_price
+    user4_count_price = uncle_bob_weekly_user.count(user4) * bob_price
+    user5_count_price = uncle_bob_weekly_user.count(user5) * bob_price
+    user6_count_price = uncle_bob_weekly_user.count(user6) * bob_price
+    return user1,user1_count_price,user2,user2_count_price,user3,user3_count_price,user4,user4_count_price,user5,user5_count_price,user6,user6_count_price
+
+print(weekly_count_uncle_bob_uesr())
