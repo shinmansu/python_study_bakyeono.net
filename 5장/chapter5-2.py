@@ -160,3 +160,19 @@ print(alphabet_list[::2])   # 전체 범위에서 두 요소마다 하나씩 선
 print(alphabet_list[1::2])  # 1 이상의 범위에서 두 요소마다 하나씩 선택
 
 print(alphabet_list[::-1])  # 전체 범위에서 뒤에서부터 한 요소마다 하나씩 선택
+
+
+original_list = ['a', 'b', 'c', 'd']
+copied_list = original_list[:]
+print(copied_list == original_list)
+
+copied_list[0] = 'A'
+print(copied_list)
+
+print(copied_list == original_list)
+
+assigned_list = original_list    # 리스트를 다른 변수에 대입
+assigned_list[1] = 'B'           # 대입한 리스트를 수정
+print(original_list)                    # 원본 리스트의 내용이 변경되었다
+
+#변수로 바로 지정해주면 동일한 값이 되기 때문에 그 값을 변경할 때 오리지널 리스트도 바로 변경이 되어버림 
