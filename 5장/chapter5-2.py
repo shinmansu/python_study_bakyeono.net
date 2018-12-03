@@ -155,24 +155,57 @@ number = 10을 저장한 후 number += 1을 실행하면 number의 값은 11로 
 예를 들어 간격을 2로 지정하면 두 요소마다 하나씩 선택한다. 
 간격이 음수이면 뒤에서부터 역방향으로 선택한다.
 '''
-print(alphabet_list[::2])   # 전체 범위에서 두 요소마다 하나씩 선택
+# print(alphabet_list[::2])   # 전체 범위에서 두 요소마다 하나씩 선택
+#
+# print(alphabet_list[1::2])  # 1 이상의 범위에서 두 요소마다 하나씩 선택
+#
+# print(alphabet_list[::-1])  # 전체 범위에서 뒤에서부터 한 요소마다 하나씩 선택
+#
+#
+# original_list = ['a', 'b', 'c', 'd']
+# copied_list = original_list[:]
+# print(copied_list == original_list)
+#
+# copied_list[0] = 'A'
+# print(copied_list)
+#
+# print(copied_list == original_list)
+#
+# assigned_list = original_list    # 리스트를 다른 변수에 대입
+# assigned_list[1] = 'B'           # 대입한 리스트를 수정
+# print(original_list)                    # 원본 리스트의 내용이 변경되었다
+#
+# #변수로 바로 지정해주면 동일한 값이 되기 때문에 그 값을 변경할 때 오리지널 리스트도 바로 변경이 되어버림
+#
+# #범위를 지정하여 수정하기
+# number_list[1:3] = [200, 300]
+# print(number_list)
+#
+# #통계 함수
+# #sum() 함수를 사용하면 시퀀스의 모든 요소의 합을 구할 수 있다
+# print(min(number_list))
+# print(max(number_list))
+# print(min(['가','나','다'])) # 가장 작은 요소 (가나다순 비교)
+# print(max(['가','나','다']))
+#
+# #  min([1, 2, 3, 'a'])   # 잘못된 크기 비교
+# # TypeError: '<' not supported between instances of 'str' and 'int'
 
-print(alphabet_list[1::2])  # 1 이상의 범위에서 두 요소마다 하나씩 선택
+'''
+center() 함수를 정의하라. 이 함수는 시퀀스를 하나 입력받는다. 
+입력받은 시퀀스의 요소의 개수가 홀수이면 정가운데에 있는 요소를 반환한다.
+그리고 요소의 개수가 짝수이면 가운데 요소 두 개를 리스트에 담아 반환한다.
+함수를 호출한 예는 다음과 같다.
 
-print(alphabet_list[::-1])  # 전체 범위에서 뒤에서부터 한 요소마다 하나씩 선택
+>>> center(['가', '나', '다', '라', '마'])
+'다'
 
+>>> center([2, 4, 8, 16, 32, 64])
+[8, 16]
+'''
 
-original_list = ['a', 'b', 'c', 'd']
-copied_list = original_list[:]
-print(copied_list == original_list)
+def center(list=[1,2,3,4]):
+    len(list)/
+    return list[:]
 
-copied_list[0] = 'A'
-print(copied_list)
-
-print(copied_list == original_list)
-
-assigned_list = original_list    # 리스트를 다른 변수에 대입
-assigned_list[1] = 'B'           # 대입한 리스트를 수정
-print(original_list)                    # 원본 리스트의 내용이 변경되었다
-
-#변수로 바로 지정해주면 동일한 값이 되기 때문에 그 값을 변경할 때 오리지널 리스트도 바로 변경이 되어버림 
+print(center())
