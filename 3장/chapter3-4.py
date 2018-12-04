@@ -21,11 +21,11 @@
 '''
 전역변수는 어디에서나 읽을 수 있지만, 함수 안에서 전역변수에 새로운 값을 대입하는 것은 금지된다. (잠시후 설명할 global 문을 사용하면 예외적으로 가능해진다.) 표 3-1은 지역변수와 전역변수의 접근 조건을 표로 정리한 것이다.
 
-특징	        전역변수	지역변수
-함수 안에서 읽기	가능   	가능
-함수 안에서 수정	불가(*)	가능
-함수 밖에서 읽기	가능	불가
-함수 밖에서 수정	가능	불가
+특징	          전역변수	지역변수
+함수 안에서 읽기	가능   	  가능
+함수 안에서 수정	불가(*)   가능
+함수 밖에서 읽기	가능	  불가
+함수 밖에서 수정	가능   	  불가
 '''
 
 '''
@@ -84,3 +84,21 @@ MECE(Mutually Exclusive Collectively Exhaustive의 약자, 상호배제와 전�
 상호 배타적이되, 합쳤을때는 전체가 될 수 있도록 해야 한다 
 작은 문제에 어떤 변수가 중복으로 사용된다면 문제를 정확히 보기 위해서는 함수의 정의를 다시 보아야 하기 때문이다 
 '''
+
+seconds_per_minute = 60
+def minutes_to_seconds(minutes):
+    """분을 입력받아 같은 시간 만큼의 초를 반환한다."""
+    seconds = minutes * seconds_per_minute
+    return seconds
+
+print(minutes_to_seconds(3))
+# print(seconds)
+
+num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
+
+def stamp():
+    """쿠폰 스탬프가 찍힌 횟수를 증가시키고, 화면에 출력한다."""
+    num_stamp = num_stamp + 1  # ❶ 전역변수를 수정하려고 시도함
+    print(num_stamp)
+
+stamp()

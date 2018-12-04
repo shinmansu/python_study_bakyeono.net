@@ -99,3 +99,25 @@ minus_8(x)
 HELP에 함수를 넣으면 해당 함수의 설명을 볼 수 있다     
 '''
 
+
+'''
+연습문제 3-6 매개변수와 반환값이 있는 함수 정의하기
+'''
+
+# def average_of_4_numbers(a=512,b=64,c=256,d=192):
+#     print((a+b+c+d)/4)
+#     pass
+# average_of_4_numbers()
+#
+# def no_return():
+#     """화면에 메시지를 출력하지만 , 값을 반환하지는 않는다. """
+#     print('이 함수에는 반환값이 없습니다.')
+#
+# result = no_return()
+# print(result)
+
+def triagnle_area(base=10,height=8):
+    calculated_triangle_area = base*height/2
+    return calculated_triangle_area
+
+print(triagnle_area())
