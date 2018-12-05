@@ -203,25 +203,30 @@ center() 함수를 정의하라. 이 함수는 시퀀스를 하나 입력받는�
 >>> center([2, 4, 8, 16, 32, 64])
 [8, 16]
 '''
-# def center(list=[1,2,3,4]):
-#     check = -len(list)%2
-#     list_a = list[]
-#     return
+
+def center(list=[1,2,3,4,5]):
+    lenght = len(list)
+    half = lenght//2
+    if len(list)%2 == 0:
+        center_list = list[half-1:half+1]
+    else:
+        center_list = list[half]
+    return center_list
+
+print(center([1,2,3,4]))
+
+# def mirror(list=[1,2,3,4,5]):
+#     mirror_list = list[len(list)-2::-1]
+#     return list+mirror_list
 #
-# print(center()) - 몰겠다... 연오센세에게 힌트를 요청해보자
-
-def mirror(list=[1,2,3,4,5]):
-    mirror_list = list[len(list)-2::-1]
-    return list+mirror_list
-
-print(mirror())
+# print(mirror())
 #mirror 함수
 '''
 mirror() 함수를 정의하라. 이 함수는 시퀀스를 하나 입력받아 
 그 시퀀스를 뒤집은 시퀀스를 원본에 덧붙여 반환한다.
 단, 원본 시퀀스의 마지막 요소는 덧붙이지 않는다. 함수를 호출한 예는 다음과 같다.
 '''
-print(mirror(['가','져','가','라']))
+# print(mirror(['가','져','가','라']))
 
 
 '''
@@ -236,10 +241,21 @@ minmax() 함수를 정의하라. 이 함수는 전달받은 시퀀스의 최솟�
 ['그', '프']
 '''
 
-def minmax(list = [1,2,3,4]):
-    min_list=min(list)
-    max_list=max(list)
-    min_max_list = [min_list,max_list]
-    return min_max_list
+# def minmax(list = [1,2,3,4]):
+#     min_list=min(list)
+#     max_list=max(list)
+#     min_max_list = [min_list,max_list]
+#     return min_max_list
+#
+# print(minmax())
 
-print(minmax())
+def mean(list=[1,2,3,4]):
+    if len(list) != 0:
+        list_mean = sum(list[:]) / len(list)
+    else:
+        list_mean = 'None'
+    return list_mean
+
+print(mean([]))
+
+
