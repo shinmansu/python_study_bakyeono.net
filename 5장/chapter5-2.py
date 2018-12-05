@@ -250,12 +250,37 @@ minmax() 함수를 정의하라. 이 함수는 전달받은 시퀀스의 최솟�
 # print(minmax())
 
 def mean(list=[1,2,3,4]):
+    '''리스트를 전달받아 그 리스트 수의 평균을 출력하는 함수,
+    갯수가 0개일 때는 None을 출력하게 한다. '''
     if len(list) != 0:
         list_mean = sum(list[:]) / len(list)
     else:
         list_mean = 'None'
     return list_mean
 
-print(mean([]))
+print(mean())
 
 
+'''
+시퀀스 조작 메서드 
+시퀀스를 조작할 때 많이 사용되는 메서드 몇 가지를 알아보자. 
+지금 소개하는 메서드는 시퀀스의 내용을 수정하는 메서드이기 때문에 
+튜플 등의 불변 시퀀스에는 적용할 수 없으며, 가변 시퀀스인 리스트에 주로 사용된다.
+
+메서드	용도
+append(x)	요소 x를 시퀀스의 끝(오른쪽)에 추가한다
+insert(i, x)	요소 x를 시퀀스의 i 위치에 삽입한다
+extend(seq)	대상 시퀀스를 시퀀스의 끝에 연결한다.
+pop()	시퀀스의 마지막 요소를 꺼낸다.
+remove(x)	시퀀스에서 요소 x를 찾아 처음 발견된 것을 제거한다.
+clear()	시퀀스의 모든 요소를 제거한다
+'''
+
+numbers = [10,20,30,40]
+numbers.append(100)
+print(numbers) # 100이 추가된 것을 알 수 있다
+
+
+
+numbers.insert(4,50) # 시퀀스의 4번 위치에 50을 삽입
+print(numbers)
