@@ -284,3 +284,34 @@ print(numbers) # 100이 추가된 것을 알 수 있다
 
 numbers.insert(4,50) # 시퀀스의 4번 위치에 50을 삽입
 print(numbers)
+
+numbers.extend([101, 102, 103])  # [101, 102, 103] 을 연결한다.
+print(numbers)
+
+#extend() 메서드는 += 연산으로 대신해도 된다.
+numbers += [104, 105]  # numbers.extend([104, 105]) 와 동일
+print(numbers)
+print(numbers.pop())  # 마지막 요소를 꺼내 확인하고 버린다
+print(numbers.pop())
+print(numbers.pop())
+print(numbers)
+
+numbers.remove(40)  # 40을 찾아 삭제
+print(numbers)
+
+# 데이터를 찾을 수 없는 경우 오류 발생
+
+numbers.clear()
+print(numbers)
+
+
+stations = []
+stations.append('서울')
+stations += (['수원', '대전'])
+stations.extend(['밀양', '부산'])
+stations.insert(3, '동대구')
+
+print(stations)                 # 출력 1
+print(stations.pop())           # 출력 2
+print(stations.remove('수원'))  # 출력 3
+print(stations)                 # 출력 4
