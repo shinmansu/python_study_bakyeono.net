@@ -331,3 +331,154 @@ print(name_list[0] + ' ' + phone_list[0])
 '''
 컬렉션을 사용함으로써 직접 변수를 정의할 필요가 없어졌고, 데이터를 더 유연하게 관리할 수 있게 되었다. 아직 이름 목록과 전화번호 목록이 하나의 연락처 목록으로 합쳐지지 못하고 구분되어 있다는 점이 신경쓰인다. 이 문제점은 5.4절에서 해결해 볼 것이다.
 '''
+
+'''
+튜플은 구성요소를 변경할 수 없는 불변 데이터다. 연락처 목록처럼 수시로 데이터를 변경해야 하는 데이터는 튜플이 아니라 리스트로 작성해야 한다. 튜플은 데이터를 나열하되 그 순서나 내용이 변하지 않을 때 잘 어울린다. 예를 들어, 한 주의 요일 목록(일월화수목금토)은 변하지 않는 개념이므로 튜플로 표현하기에 적합하다.
+
+코드 5-28 한 주를 구성하는 요일을 튜플로 정의
+
+'''
+
+days = ('일', '월', '화', '수', '목', '금', '토')  # 튜플 정의하기
+
+print(days)
+
+print(len(days))    # 길이 세기
+
+print(days[0])  #     인덱싱 연산
+
+
+print(days[::-1])   # 슬라이싱 연산 (새 튜플 생성)
+
+print(days + ('천', '해', '명'))  # 시퀀스 연결 (새 튜플 생성)
+
+'''
+>>> days[1] = '月'     # 요소 대입: 지원하지 않음!
+TypeError: 'tuple' object does not support item assignment
+
+>>> days.append('천')  # append 메서드: 지원하지 않음!
+AttributeError: 'tuple' object has no attribute 'append'
+'''
+
+
+'''
+인지 표현하기
+레인지를 표현할 때는 range() 함수를 사용한다. 
+이 함수에는 매개변수를 1개 또는 2개 또는 3개 지정할 수 있다. 
+지정하는 매개변수의 수에 따라서 생성되는 레인지가 다음과 같이 차이가 있다.
+
+range(종료): 0 부터 종료값에 이르기 전의 1씩 증가하는 등차수열 시퀀스를 생성한다.
+range(시작, 종료): 시작값부터 종료값에 이르기 전의 1씩 증가하는
+등차수열 시퀀스를 생성한다.
+range(시작, 종료, 간격)) 시작값부터, 종료값에 이르기 전의 간격만큼씩
+증가하는 등차수열 시퀀스를 생성한다.
+'''
+
+print(list(range(9)))         # 0 이상, 9 미만의 1씩 증가하는 등차수열
+
+print(list(range(5, 12)))     # 5 이상, 12 미만의 1씩 증가하는 등차수열
+
+
+print(list(range(0, 20, 2)))  # 0 이상, 20 미만의 2씩 증가하는 등차수열
+
+print(range(9))# 내용 대신 range(0, 9)라는 표현만 출력된다
+
+#레인지의 내용을 확인하려면 list() 함수나 tuple() 함수로 감싸 레인지를 리스트나 튜플로 변환해주어야 한다.
+
+print(list(range(9)))
+print(tuple(range(9)))
+
+경 = 10 ** 16
+print(range(경))
+# print(list(range(경)))#메모리 에러 발생 너무 큰 수를 출력할 수 없음
+print(range(경)[-1]) #요소는 출력 가능
+
+print(range(0, 100, 2)[10])       # 인덱싱 연산
+
+
+print(range(0, 100, 2)[10:20:2])  # 슬라이싱 연산 (새로운 규칙 생성)
+
+
+# range(0, 100, 2)[10] = 50  # 요소 대입은 지원하지 않는다.
+
+'''
+레인지를 리스트로 변환한 후에는 수정 가능하다 
+'''
+
+numbers = list(range(10))
+numbers[5] = 100
+print(numbers)
+
+
+'''연습문제 5-7 레인지로 계산하기
+
+레인지를 사용해, 0 이상 10000 미만인 모든 짝수의 합계를 구하라'''
+range(1000)
+print(list(range(1000))[999])
+
+print(sum(range(1000)))
+'''
+연습문제 5-8 레인지로 리스트 생성하기
+
+레인지를 사용해, 9부터 0(포함)까지 거꾸로 나열한 리스트를 생성하라.
+
+힌트: 레인지를 리스트로 변환하는 것을 잊지 말자
+'''
+
+print(list(range(9,0,-1)))
+
+
+'''문자열은 시퀀스이므로 시퀀스 연산이 가능하다. 그러나 불변 데이터이기 때문에 내용을 수정하는 것은 허용되지 않는다.
+
+코드 5-36 문자열의 시퀀스 연산
+
+>>> message = '사막이 아름다운 것은 어딘가에 물을 감추고 있기 때문이야'
+>>> '물' in message     # 요소가 들어있는지 확인
+True
+
+>>> message[17]         # 인덱싱 연산
+'물'
+
+>>> message[:2]         # 슬라이싱 연산
+'사막'
+
+>>> message[17] = '샘'  #  요소 수정은 불가하다
+TypeError: 'str' object does not support item assignment
+'''
+
+#문자열을 튜플, 리스트로 변화시키기
+print(list('파이썬'))
+
+print(tuple('일월화수목금토'))
+
+'''
+연습문제 5-9 시퀀스 뒤집기
+
+시퀀스를 입력받아 반대 순서로 뒤집어 반환하는 함수 reverse()를 정의하라. 그 후, 이 함수에 리스트, 튜플, 레인지, 문자열을 각각 입력해 결과를 확인해 보아라. 예를 들면 다음과 같다.
+
+>>> reverse([10, 20, 30, 40])
+[40, 30, 20, 10]
+
+>>> reverse(tuple('일월화수목금토'))
+('토', '금', '목', '수', '화', '월', '일')
+
+>>> reverse(range(10))
+range(9, -1, -1)
+
+>>> reverse('파이썬 프로그래밍')
+'밍래그로프 썬이파'
+'''
+
+def reverse(sequence =  [1]):
+    """시퀀스(리스트,튜플,레인지)를 입력 받아 그 시퀀스를 역순으로 출력하는 함수"""
+    if type(sequence) == list:
+        reverse_sequence = sequence[::-1]
+    elif type(sequence) == tuple:
+        reverse_sequence = sequence[::-1]
+    elif type(sequence) == range:
+        reverse_sequence = range(len(sequence),-1,-1)
+    else:
+        reverse_sequence = str(type(sequence)) + '는 출력이 불가능합니다.' + 'list,tuple,range 타입으로 다시 입력해주세요'
+    return reverse_sequence
+
+print(reverse(1))
