@@ -315,3 +315,19 @@ print(stations)                 # 출력 1
 print(stations.pop())           # 출력 2
 print(stations.remove('수원'))  # 출력 3
 print(stations)                 # 출력 4
+
+name_list = []
+phone_list = []
+
+name_list.append('박연오')
+phone_list.append('01012345678')
+name_list.append('이진수')
+phone_list.append('01011001010')
+len(name_list)
+
+print(name_list[0] + ' ' + phone_list[0])
+
+
+'''
+컬렉션을 사용함으로써 직접 변수를 정의할 필요가 없어졌고, 데이터를 더 유연하게 관리할 수 있게 되었다. 아직 이름 목록과 전화번호 목록이 하나의 연락처 목록으로 합쳐지지 못하고 구분되어 있다는 점이 신경쓰인다. 이 문제점은 5.4절에서 해결해 볼 것이다.
+'''
