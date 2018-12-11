@@ -66,10 +66,119 @@ empty_dict = {}  # 빈 사전
 올리브	115
 돼지고기	242.1
 '''
-
-
-
 meal_kcal = {'밀가루':364,
              '피망': 20.1,
-             '올리브': 225
+             '올리브': 225,
              '돼지고기': 242.1}
+
+word_dict = {
+'cat': '고양이',
+'hammer': '망치',
+'rainbow': '무지개',
+'book': '책',
+}
+# print(word_dict)
+#
+#
+# print('cat' in word_dict)      # word_dict에 'cat' 키가 있는지 검사
+#
+#
+# print('dog' not in word_dict)  # word_dict에 'dog' 키가 없음을 검사
+#
+#
+# print('망치' in word_dict)     # ❶ word_dict에 '망치' 키가 있는지 검사
+#
+# print(len({}))         # 빈 사전의 키-값 쌍의 개수
+#
+#
+# print(len(word_dict))  # word_dict의 키-값 쌍의 개수
+
+# 특이점은 len으로 총 값이 아닌 쌍의 개수를 센다는 것이다
+
+
+# 딕셔너리는 키에 연결된 '값'을 찾을 수 있다
+# print(word_dict['cat'] ) # 사전에서 'cat' 키와 연결된 값 구하기
+
+# print(word_dict['dog'])  # 오류: 사전에 없는 키
+#KeyError: 'dog'
+
+#KeyError 오류를 피하고 싶으면 get() 메서드를 사용하면 된다.
+# get() 메서드는 키가 있으면 키에 연결된 값을 반환하고,
+#  키가 없으면 None이나 기본값으로 지정한 값을 반환한다.
+
+# print(word_dict.get('cat'))   # 키가 있을 경우
+# print(word_dict.get('dog'))  # 키가 없을 경우 None 반환
+# print(word_dict.get('dog', '동물'))
+
+#사전[키] = 값 표현으로 새로운 키-값 쌍을 추가할 수 있다.
+word_dict['moon'] = '달'     # 새로운 키-값 쌍 추가
+print(word_dict)
+
+word_dict['cat'] = '야옹이'  # 이미 존재하는 키에 새로운 값을 대입
+print(word_dict)  # 내용을 확인해보면...
+
+word_dict.update({'star': '별님', 'moon': '달님'})
+print(word_dict)
+
+
+# 어떤 요소(키-값 쌍)을 삭제하고 싶다면 del 사전[키] 명령을 사용한다.
+del word_dict['hammer']   # 'hammer' 키를 삭제
+print(word_dict)
+
+word_dict.clear()   # 모든 키를 삭제
+print(word_dict)
+
+
+'''
+연습문제 5-11 사전을 이용한 칼로리 계산
+
+연습문제 5-10에서 정의한 식재료별_칼로리 사전을 활용해 칼로리를 계산하는 함수 칼로리()를 정의하라. 
+이 함수는 음식의 종류와 섭취량을 매개변수에 전달받아 총칼로리를 반환한다.
+단, 전달받은 음식이 식재료별_칼로리 사전에 정의되어 있지 않은 경우에는 None을 반환한다. 
+다음은 이 함수를 대화식 셸에서 실행한 예다.
+'''
+
+def 칼로리(food = '돼지고기',gram = 500):
+    meal_100gram_kcal = {'밀가루': 364,
+                 '피망': 20.1,
+                 '올리브': 225,
+                 '돼지고기': 242.1}
+    if meal_100gram_kcal.get(food) != None:
+        counted_calorie = meal_100gram_kcal.get(food) * (gram/100)
+    else:
+        counted_calorie = meal_100gram_kcal.get(food)
+    return counted_calorie
+print(칼로리('돼지고기',500))
+print(칼로리('소고기',300))
+
+
+'''
+연습문제 5-12 칼로리 계산기 확장하기
+
+앞에서 정의한 식재료별_칼로리 사전 또는 칼로리() 함수를 수정하여,
+칼로리() 함수가 치즈의 칼로리도 계산할 수 있도록 수정해 보아라. 
+참고로 치즈의 칼로리는 402.5 kcal / 100g이다.
+
+사전을 수정하는 것과 함수를 수정하는 것 중 어느 방식이 더 편리한가? 그 이유는 무엇인가?
+'''
+def 칼로리(food = '돼지고기',gram = 500):
+    meal_100gram_kcal = {'밀가루': 364,
+                 '피망': 20.1,
+                 '올리브': 225,
+                 '돼지고기': 242.1}
+    meal_100gram_kcal['치즈'] = 402.5
+    if meal_100gram_kcal.get(food) != None:
+        counted_calorie = meal_100gram_kcal.get(food) * (gram/100)
+    else:
+        counted_calorie = meal_100gram_kcal.get(food)
+    return counted_calorie
+print(칼로리('치즈',100))
+
+
+# 코드 5-39의 메뉴판({'아메리카노': 2500, '카페 라테': 3000, '딸기 주스': 3000})을 사전이 아니라 시퀀스로 표현해 보자.
+#
+# 코드 5-52 메뉴판의 정보를 리스트로 표현했을 때
+
+price_list = [2500, 3000, 3000]                        # ❶
+drink_list = ['아메리카노', '카페 라테', '딸기 주스']  # ❷
+
