@@ -36,7 +36,7 @@ cat: 고양이, hammer: 망치, rainbow: 무지개, book: 책
 }
 '''
 
-dict = {
+menu_dict = {
     '아메리카노': 2500,
     '카페 라테': 3000,
     '딸기 주스': 3000,
@@ -182,3 +182,14 @@ print(칼로리('치즈',100))
 price_list = [2500, 3000, 3000]                        # ❶
 drink_list = ['아메리카노', '카페 라테', '딸기 주스']  # ❷
 
+menu_dict = dict(zip(drink_list, price_list))
+#dict을 중복 변수로 사용할 경우 여기서 에러가 나버림 / 조심해서 쓰자
+print(menu_dict)
+
+print(menu_dict.keys())   # 사전의 키 시퀀스
+print(menu_dict.values())   # 사전의 값 시퀀스
+print(menu_dict.items())  # 사전의 키-값 쌍 시퀀스
+
+'''''
+
+'''
