@@ -15,7 +15,7 @@
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter3_2.coverage" NAME="chapter3-2 Coverage Results" MODIFIED="1542807177660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3장" />
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter4_3.coverage" NAME="chapter4-3 Coverage Results" MODIFIED="1543647645432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4장" />
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter5_1.coverage" NAME="chapter5-1 Coverage Results" MODIFIED="1543745761173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5장" />
-    <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter5_5.coverage" NAME="chapter5-5 Coverage Results" MODIFIED="1545143913427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5장" />
+    <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter5_5.coverage" NAME="chapter5-5 Coverage Results" MODIFIED="1545146969190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/5장" />
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter4_4.coverage" NAME="chapter4-4 Coverage Results" MODIFIED="1543647909151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4장" />
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chapter2.coverage" NAME="chapter2 Coverage Results" MODIFIED="1542726076435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2장" />
     <SUITE FILE_PATH="coverage/python_study_bakyeono_net$chpater3_5.coverage" NAME="chpater3-5 Coverage Results" MODIFIED="1543110286692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/3장" />
@@ -74,8 +74,8 @@
       <file leaf-file-name="chapter5-5.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/5장/chapter5-5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -778,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/5장/chapter5-5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="179" column="0" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="198" column="0" lean-forward="true" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
           <folding />
         </state>
       </provider>
