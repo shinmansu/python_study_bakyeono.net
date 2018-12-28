@@ -299,14 +299,11 @@ is_leap_year()를 정의하라.
 '''
 
 def is_leap_year(year = 2000):
-    if year % 400 == 0:
+    if year % 400 == 0 or year % 4 == 0 and year %100 != 0 :
         return True
-    elif year % 100 == 0:
+    else:
         return False
-    elif year % 4 == 0:
-        return True
-
-print(is_leap_year(1996))
+print(is_leap_year(2000))
 
 # 부분집합이라 볼 때 가장 작은 if 부터 먼저 나오도록 하고 가장 범위가 큰 대상을 나중에 나오게 해야 모든 값을
 # if로 표현하는 것이 가능해진다
