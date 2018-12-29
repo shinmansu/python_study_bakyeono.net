@@ -373,7 +373,7 @@ def 체질량_체크(체질량지수 = 20):
 def absolute_number(a=0):
     """정수를 입력받아 절대값을 출력하는 함수 , 조건식으로 작성"""
     a = int(a)
-    a = +a if a >= 0 else -a
+    a = a if a >= 0 else -a
     return a
 
-print(absolute_number(-5))
+print(absolute_number(5))
