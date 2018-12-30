@@ -377,3 +377,10 @@ def absolute_number(a=0):
     return a
 
 print(absolute_number(5))
+
+'''
+요점 정리
+
+컬렉션을 순회하며 컬렉션의 각 요소를 읽고 사용할 수 있다.
+for 문을 이용하면 컬렉션을 간편하게 순회할 수 있다.
+'''
