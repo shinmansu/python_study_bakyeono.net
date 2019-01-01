@@ -181,22 +181,74 @@ print(total)
 
 total = 0  # 합계
 
-for n in range(2, 10000001, 2):  # 2부터 1천만까지 2씩 증가하는 레인지를 순회
-    total += n                   # n이 짝수인지 검사하지 않고 total에 더해도 된다
-
-print(total)
+# for n in range(2, 10000001, 2):  # 2부터 1천만까지 2씩 증가하는 레인지를 순회
+#     total += n                   # n이 짝수인지 검사하지 않고 total에 더해도 된다
+#
+# print(total)
 
 # 요점 정리
 
 # for 문과 레인지를 이용해 등차수열을 순회할 수 있다.
 
-print('안녕을 몇 번 반복하시겠습니까?')
-n = int(input())    # 반복할 횟수
+# print('안녕을 몇 번 반복하시겠습니까?')
+# n = int(input())    # 반복할 횟수
+#
+# for _ in range(n):  # 코드를 n번 반복 실행
+#     print('안녕')
 
-for _ in range(n):  # 코드를 n번 반복 실행
-    print('안녕')
-
-
-    '''요점 정리
+'''요점 정리
 
 for 문과 레인지를 이용해 코드를 N회 반복 실행할 수 있다.'''
+
+# for 문과 while 문의 구분은 반복문이
+
+#continue 문: 이번 주기의 실행을 중지
+#continue 문은 반복 도중에 ‘한 주기의 실행’을 중지하고 다음 주기로 넘어도록 하는 명령이다. continue 문을 사용하려면 for 문 또는 while 문의 본문 안에서 continue를 입력하면 된다. 다음은 for 문에서 continue 문을 사용한 예다.
+
+#코드 6-31 continue 문
+
+for i in range(4):
+    print('현재 반복 주기:', i)      # ❶
+    continue                         # 현재 반복 주기를 중지하고 다음 주기로 넘어간다
+    print('다음 반복 주기:', i + 1)  # ❷
+
+#break 문: 반복 전체를 중지
+#break 문은 반복의 한 주기만이 아니라 ‘반복 전체’를 중지시킨다. 사용법은 continue 문과 동일하다. 다음은 for 문에서 break 문을 사용한 예다.
+
+#코드 6-32 break 문
+
+for i in range(4):
+    print('현재 반복 주기:', i)      # ❶
+    break                            # 반복 전체를 중지한다
+    print('다음 반복 주기:', i + 1)  # ❷
+
+total  = 0
+
+# 코드 6-33 continue 문과 break 문의 활용
+
+total = 0
+
+while True:
+    print('더할 수를 입력하세요: ', end = '')
+    user_input = input()
+
+# 코드 6 - 33 continue 문과 break 문의 활용
+
+total = 0
+
+
+while True:  # ❶ 본문 코드를 무한 반복한다
+    print('더할 수를 입력하세요: ', end='')
+    user_input = input()
+
+    if user_input == '그만':  # ❷ '그만'이 입력되면 반복을 종료한다
+        break
+
+    if not user_input.isnumeric():  # ❸ 입력이 수가 아니면 다음 주기로 넘어간다
+        print('잘못된 입력입니다.')
+        continue
+
+    total += int(user_input)
+    print('합계:', total)
+
+print('프로그램을 종료합니다.')
