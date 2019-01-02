@@ -251,4 +251,4 @@ while True:  # ❶ 본문 코드를 무한 반복한다
     total += int(user_input)
     print('합계:', total)
 
-print('프로그램을 종료합니다.')
+print('프로그램을 종료합니다.') 1
