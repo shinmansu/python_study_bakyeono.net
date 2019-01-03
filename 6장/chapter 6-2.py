@@ -227,16 +227,16 @@ total  = 0
 # 코드 6-33 continue 문과 break 문의 활용
 
 total = 0
-
-while True:
-    print('더할 수를 입력하세요: ', end = '')
-    user_input = input()
+#
+# while True:
+#     print('더할 수를 입력하세요: ', end = '')
+#     user_input = input()
 
 # 코드 6 - 33 continue 문과 break 문의 활용
 
 total = 0
 
-
+'''
 while True:  # ❶ 본문 코드를 무한 반복한다
     print('더할 수를 입력하세요: ', end='')
     user_input = input()
@@ -251,4 +251,24 @@ while True:  # ❶ 본문 코드를 무한 반복한다
     total += int(user_input)
     print('합계:', total)
 
-print('프로그램을 종료합니다.') 1
+print('프로그램을 종료합니다.')
+'''
+
+#코드 6-35 else 절이 실행되지 않는 경우
+
+i = 0
+while(i < 100):
+    print(i, '번째 실행')
+    i += 1
+    if (i > 2):
+        print('반복 중지')
+        break
+else:
+    print('반복 완료')
+
+'''
+for 변수 in 컬렉션:
+    본문 1            # 컬렉션의 각 항목마다 반복 실행할 코드 블록
+else:
+    본문 2            # 반복이 정상 종료된 직후 실행할 코드 블록
+'''
