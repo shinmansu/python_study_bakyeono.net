@@ -192,7 +192,7 @@ if 문에서 여러 조건을 결합하고 싶을 때가 있다. 예를 들어,
 #
 #
 # if (날씨 == '맑음') and (요일 == '일요일'):
-#     print('공원에서 스케이트보드를 타자.')
+#     print('공원에서 스r케이트보드를 타자.')
 #
 #
 # if 요일 == '토요일':
@@ -299,10 +299,8 @@ is_leap_year()를 정의하라.
 '''
 
 def is_leap_year(year = 2000):
-    if year % 400 == 0 or year % 4 == 0 and year %100 != 0 :
-        return True
-    else:
-        return False
+    return year % 400 == 0 or year % 4 == 0 and year %100 != 0
+
 print(is_leap_year(2000))
 
 # 부분집합이라 볼 때 가장 작은 if 부터 먼저 나오도록 하고 가장 범위가 큰 대상을 나중에 나오게 해야 모든 값을

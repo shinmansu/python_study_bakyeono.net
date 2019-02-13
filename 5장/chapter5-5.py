@@ -214,7 +214,8 @@ print(mean2(*[10, 20, 30, 40]))
 '''
 
 def concatenate(*args,seperator = '/'):
+    """문자들의 리스트와 seperator를 전달받아 seprator로 구분된 값을 출력하는 함수"""
     return seperator.join(args)
 
 
-print(concatenate('가난하다고', '해서', '외로움을', '모르겠는가', seperator='/'))
+print(concatenate('가난하다고', '해서', '외로움을', '모르겠는가', seperator = '-'))

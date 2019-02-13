@@ -326,7 +326,14 @@ while i >= 100 and i < 10000 :
 연습문제 6-7 5의 배수의 합계 (for 문을 사용하여)
 
 연습문제 6-6의 문제를 for 문과 레인지를 사용해 계산해 보아라.
+
 '''
+suma = 0
+for i in range(100,10000,5):
+    suma += i
+
+print(suma)
+
 
 j = 0
 for i in range(100,10000,5):
@@ -336,6 +343,59 @@ for i in range(100,10000,5):
     print(j)
 
 
-def max_for(list=[1,2,3,4,5]):
+def max_for(numbers = [1,2,3,4,5]):
     """리스트를 전달받아 리스트에서 가장 큰 요소를 반환한다."""
-    where 
+    candidate = numbers[0]
+    for i in numbers:
+        if i > candidate:
+            candidate = i
+    return candidate
+print(max_for())
+
+
+def find(needle,haystack) :
+    """"needle을 입력 받아 haystack(리스트)에서 몇 번째 원소인지 출력하는 함수
+    없으면 None을 출력한다"""
+    for e in haystack
+        if needle = e
+            return e
+    else:
+        return None
+
+
+
+def find_testor(function):
+    print(function(5, [1, 2, 3, 4, 5]) == 4)
+    print(function(3, [4, 3, 5, 1, 2]) == 1)
+    print(function(9, [1, 2, 3, 4, 5]) is None)
+
+
+def find(needle, haystack):
+    for i in range(len(haystack)):
+        if needle == haystack[i]:
+            return i
+        else:
+            continue
+
+def index(needle, haystack):
+    index_num = 0
+    for element in haystack:
+        if element == needle:
+            return index_num
+        index_num = index_num + 1
+    return None
+
+
+def yeono_find(needle, haystack):
+    i = 0
+    for element in haystack:
+        if element == needle:
+            return i
+        i += 1
+
+def solve(n):
+    if len(str(n)) < 2:
+        return n
+    else:
+        next_number = int(str(n)[0]) * int(str(n)[1])
+        return solve(next_number)
