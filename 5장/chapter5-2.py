@@ -205,8 +205,8 @@ center() 함수를 정의하라. 이 함수는 시퀀스를 하나 입력받는�
 '''
 
 def center(list=[1,2,3,4,5]):
-    lenght = len(list)
-    half = lenght//2
+    length = len(list)
+    half = length//2
     if len(list)%2 == 0:
         center_list = list[half-1:half+1]
     else:

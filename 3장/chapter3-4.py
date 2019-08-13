@@ -37,24 +37,24 @@
 
 pi = 3.141592653589793
 
-# def area_of_circle(radius):
-#     """원의 반지름(radius)을 입력받아 넓이를 반환한다."""
-#     area = radius * radius * pi
-#     return area
-#
-# def volume_of_cylinder(radius, height):
-#     """원기둥의 반지름(radius)과 높이(height)를 입력받아
-#     부피를 반환한다."""
-#     top_area = area_of_circle(radius)
-#     volume = top_area * height
-#     return volume
-#
-# result = volume_of_cylinder(5, 10)
-# print(result)
-#
-# # 전역 변수 pie / result
-# #지역변수 area / top_area / volume
-#
+def area_of_circle(radius):
+    """원의 반지름(radius)을 입력받아 넓이를 반환한다."""
+    area = radius * radius * pi
+    return area
+
+def volume_of_cylinder(radius, height):
+    """원기둥의 반지름(radius)과 높이(height)를 입력받아
+    부피를 반환한다."""
+    top_area = area_of_circle(radius)
+    volume = top_area * height
+    return volume
+
+result = volume_of_cylinder(5, 10)
+print(result)
+
+# 전역 변수 pie / result
+#지역변수 area / top_area / volume
+
 '''
 개념 정리
 
@@ -91,14 +91,14 @@ def minutes_to_seconds(minutes):
     seconds = minutes * seconds_per_minute
     return seconds
 
-print(minutes_to_seconds(3))
+print(minutes_to_seconds(5))
 # print(seconds)
 
-num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
-
-def stamp():
-    """쿠폰 스탬프가 찍힌 횟수를 증가시키고, 화면에 출력한다."""
-    num_stamp = num_stamp + 1  # ❶ 전역변수를 수정하려고 시도함
-    print(num_stamp)
-
-stamp()
+# num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
+#
+# def stamp():
+#     """쿠폰 스탬프가 찍힌 횟수를 증가시키고, 화면에 출력한다."""
+#     num_stamp = num_stamp + 1  # ❶ 전역변수를 수정하려고 시도함
+#     print(num_stamp)
+#
+# stamp()

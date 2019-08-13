@@ -131,7 +131,7 @@ print(circumference(rectangle_3))  # 16.0
 # 데이터의 유형을 구별할 수 있으면 그에 따라 알맞는 연산을 수행할 수 있다.
 
 
-연습문제 8-2 체스말, 바둑돌 출력하기
+#연습문제 8-2 체스말, 바둑돌 출력하기
 
 # 연습문제 8-1에서 정의한 체스말 또는 바둑돌 데이터를 전달받아
 # 화면에 출력하는 함수 print_piece()를 정의해라. 이 함수는 전달받은 데이터가
@@ -152,11 +152,20 @@ print(circumference(rectangle_3))  # 16.0
 바둑돌1 = {'type': '바둑', 'x': 8, 'y': 14, 'order': 83, 'color': '흑'}
 바둑돌2 = {'type': '바둑', 'x': 12, 'y': 3, 'order': 84, 'color': '백'}
 
-str[바둑돌1[x]]
-
 def check_position(board) :
     if board['type'] == '체스' :
         place = str(board['x'])+str(board['y'])
         color = board['color']
         role = board['role']
-        return color + ' ' + role + ' ' + place + ' 위치에 놓여 있어요.'
+        print ( color + ' ' + role + ' ' + place + ' 위치에 놓여 있어요.')
+        return
+    elif board['type'] == '바둑' :
+        place_2 = str(board['x']) + ', ' + str(board['y'])
+        color = board['color']
+        order  = str(board ['order'])
+        print ( '제 ' + order + ' 수: '+ color + '이 ('+ place_2+ ') 위치에 두었습니다.')
+        return
+
+check_position(바둑돌1)
+
+

@@ -17,9 +17,21 @@ import math
 함수를 호출하여 반환값을 화면에 출력하기: print(함수이름(데이터))
 
 '''
-
 print('수를 입력해 주세요')
 number = int(input())
 
 result = round(math.sqrt(number * math.pi))
 print('계산 결과:', result)
+
+
+
+
+
+
+
+
+
+
+
+
+

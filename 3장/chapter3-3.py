@@ -13,8 +13,8 @@
 def 함수이름():       # ❶ 헤더 행
     함수의 내용       # ❷ 내용 행 (여러 행)
 '''
-# 예시는 자판기가 주문을 처리하는 과정이다
-#
+#예시는 자판기가 주문을 처리하는 과정이다
+
 # def order():                               # 끝에 콜론(:)을 빠트리지 않도록 주의
 #     '''사용자로부터 주문할 음료수를 입력받는다. '''
 #     print('주문하실 음료를 알려주세요')    # 이 블록은
@@ -31,7 +31,7 @@ def 함수이름():       # ❶ 헤더 행
 #
 # inputabs()
 #
-# def print_price(num_drㅓㅡㅏㅜ ㅡink):                       # ❶ 매개변수(num_drink) 정의
+# def print_price(num_drink):                       # ❶ 매개변수(num_drink) 정의
 #     """음료의 잔 수(num_drink)를 전달받아,
 #     가격을 화면에 출력한다."""
 #     price_per_drink = 2500                        # 한 잔 당 가격 지역변수
@@ -77,32 +77,32 @@ None은 값이 없음을 나타내는 값이다. 함수의 반환값을 지정�
 return - 함수에 반환값을 돌려줘서 함수(매개변수)를 값으로 쓸 수 있게 해준다 
 
 '''
-
+#
 # def no_return():
 #     """화면에 메시지를 출력하지만, 값을 반환하지는 않는다."""
 #     print('이 함수에는 반환값이 없습니다.')
 #
 # result = no_return()
-
+#
 # def triangle_area(base,height):
 #     '''삼각형 밑변의 길이를 앞에, 높이를 뒤에 적어줍니다 '''
 #     print("삼각형의 넓이는",(base*height)/2,"입니다")
 #
 # triangle_area(10,8)
 
-'''
->>> help(minus_8)
-Help on function minus_8 in module __main__:
 
-minus_8(x)
-    정수 x를 입력받아 8을 뺀 값을 반환한다.
-HELP에 함수를 넣으면 해당 함수의 설명을 볼 수 있다     
-'''
+# help(minus_8)
+# Help on function minus_8 in module __main__:
+#
+# minus_8(x)
+#     정수 x를 입력받아 8을 뺀 값을 반환한다.
+# #HELP에 함수를 넣으면 해당 함수의 설명을 볼 수 있다
 
 
-'''
-연습문제 3-6 매개변수와 반환값이 있는 함수 정의하기
-'''
+
+
+#연습문제 3-6 매개변수와 반환값이 있는 함수 정의하기
+
 
 # def average_of_4_numbers(a=512,b=64,c=256,d=192):
 #     print((a+b+c+d)/4)

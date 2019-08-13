@@ -28,7 +28,7 @@ print(-100000)
 '''
 
 print(0o12)
-print(0xff)
+print(0xfe)
 
 ''' 
 파이썬에서는 부동소수점 수(floating point number, 줄여서 float)라는 데이터 유형으로 실수를 다룬다.
